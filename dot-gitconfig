@@ -1,0 +1,176 @@
+[user]
+email    = elmaslouhy.mouaad@gmail.com
+name     = mouaadmem16
+[core]  
+editor   = vi 
+[alias]
+a        =  add 
+aa       =  add --all    
+am       =  am  
+ama      =  am --abort   
+amc      =  am --continue
+ams      =  am --skip    
+amscp    =  am --show-current-patch        
+ap       =  apply        
+apa      =  add --patch  
+apt      =  apply --3way 
+au       =  add --update 
+av       =  add --verbose
+b        =  branch       
+ba       =  branch --all 
+bd       =  branch --delete       
+bD       =  branch --delete --force        
+bl       =  blame -b -w  
+bnm      =  branch --no-merged    
+br       =  branch --remote       
+bs       =  bisect       
+bsb      =  bisect bad   
+bsg      =  bisect good  
+bsr      =  bisect reset 
+bss      =  bisect start 
+c        =  commit --verbose      
+c-a      =  commit --verbose --amend       
+ca       =  commit --verbose --all
+ca-a     =  commit --verbose --all --amend 
+cam      =  commit --all --message
+can-a    =  commit --verbose --all --no-edit --amend
+cans-a   =  commit --verbose --all --signoff --no-edit --amend        
+cas      =  commit --all --signoff
+casm     =  commit --all --signoff --message        
+cb       =  checkout -b  
+cd       =  checkout $(git_develop_branch) 
+cf       =  config --list
+cl       =  clone --recurse-submodules     
+clean    =  clean --interactive -d
+cm       =  checkout $(git_main_branch)    
+cmsg     =  commit --message      
+cn-a     =  commit --verbose --no-edit --amend      
+co       =  checkout     
+cor      =  checkout --recurse-submodules  
+count    =  shortlog --summary -n 
+cp       =  cherry-pick  
+cpa      =  cherry-pick --abort   
+cpc      =  cherry-pick --continue
+cs       =  commit -S    
+csm      =  commit --signoff --message     
+css      =  commit -S -s 
+cssm     =  commit -S -s -m       
+d        =  diff
+dca      =  diff --cached
+dcw      =  diff --cached --word-diff      
+ds       =  diff --staged
+dt       =  diff-tree --no-commit-id --name-only -r 
+dup      =  diff @{upstream}      
+dw       =  diff --word-diff      
+f        =  fetch        
+fa       =  fetch --all --prune   
+fo       =  fetch origin 
+g        =  gui citool   
+ga       =  gui citool --amend    
+gf       =  push --force origin $(current_branch)   
+gfl      =  push --force-with-lease origin $(current_branch) 
+gl       =  pull origin $(current_branch)  
+gp       =  push origin $(current_branch)  
+gpull    =  pull origin "$(git_current_branch)"     
+gpush    =  push origin "$(git_current_branch)"     
+gsup     =  branch --set-upstream-to=origin/$(git_current_branch)     
+gu       =  pull --rebase origin $(current_branch)  
+hh       =  help
+ignore   =  update-index --assume-unchanged
+l        =  pull
+lg       =  log --stat   
+lgg      =  log --graph  
+lgga     =  log --graph --decorate --all   
+lgm      =  log --graph --max-count=10     
+lgp      =  log --stat --patch    
+lo       =  log --oneline --decorate       
+lod      =  log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'     
+lods     =  log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short 
+log      =  log --oneline --decorate --graph        
+loga     =  log --oneline --decorate --graph --all  
+lol      =  log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'     
+lola     =  log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --all        
+lols     =  log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --stat       
+luc      =  pull upstream $(git_current_branch)     
+lum      =  pull upstream $(git_main_branch)        
+m        =  merge        
+ma       =  merge --abort
+mom      =  merge origin/$(git_main_branch)
+ms       =  merge --squash        
+mtl      =  mergetool --no-prompt 
+mtlvim   =  mergetool --no-prompt --tool=vimdiff    
+mum      =  merge upstream/$(git_main_branch)       
+p        =  push
+pd       =  push --dry-run        
+pf       =  push --force 
+pod      =  push origin --delete  
+pr       =  pull --rebase
+psup     =  push --set-upstream origin $(git_current_branch) 
+pu       =  push upstream
+pv       =  push --verbose        
+r        =  remote       
+ra       =  remote add   
+rb       =  rebase       
+rba      =  rebase --abort        
+rbc      =  rebase --continue     
+rbd      =  rebase $(git_develop_branch)   
+rbi      =  rebase --interactive  
+rbm      =  rebase $(git_main_branch)      
+rbo      =  rebase --onto
+rbom     =  rebase origin/$(git_main_branch)        
+rbs      =  rebase --skip
+rev      =  revert       
+rh       =  reset        
+rhh      =  reset --hard 
+rm       =  rm  
+rmc      =  rm --cached  
+rmv      =  remote rename
+roh      =  reset origin/$(git_current_branch) --hard        
+rrm      =  remote remove
+rs       =  restore      
+rset     =  remote set-url        
+rss      =  restore --source      
+rst      =  restore --staged      
+ru       =  reset --     
+rup      =  remote update
+rv       =  remote --verbose      
+sb       =  status --short -b     
+sd       =  svn dcommit  
+sh       =  show
+si       =  submodule init        
+sps      =  show --pretty=short --show-signature    
+sr       =  svn rebase   
+ss       =  status --short        
+st       =  status       
+staa     =  stash apply  
+stall    =  stash --all  
+stc      =  stash clear  
+std      =  stash drop   
+stl      =  stash list   
+stp      =  stash pop    
+sts      =  stash show --text     
+stu      =  stash --include-untracked      
+su       =  submodule update      
+sw       =  switch       
+swc      =  switch -c    
+swd      =  switch $(git_develop_branch)   
+swm      =  switch $(git_main_branch)      
+ts       =  tag -s       
+unignore =  update-index --no-assume-unchanged      
+up       =  pull --rebase
+upa      =  pull --rebase --autostash      
+upav     =  pull --rebase --autostash --verbose     
+upom     =  pull --rebase origin $(git_main_branch) 
+upomi    =  pull --rebase=interactive origin $(git_main_branch)       
+upv      =  pull --rebase --verbose        
+wch      =  whatchanged -p --abbrev-commit --pretty=medium   
+wt       =  worktree     
+wtls     =  worktree list
+wtmv     =  worktree move
+wtrm     =  worktree remove
+[color]  
+diff = auto  
+status = auto  
+branch = auto 
+[branch]  
+autosetuprebase = always

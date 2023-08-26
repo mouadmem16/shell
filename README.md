@@ -1,4 +1,4 @@
 # shell
 ---
-code shell from university
+Usefull shell scripts and utilities
 ---
